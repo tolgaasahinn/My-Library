@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library</title>
+</head>
+<body>
+<h1>My Book</h1>
+<h2>Book Name : {{book.title}}</h2>
+<p>Current Rating {{book.rating}}</p>
+<form action="{{ url_for('rate_change') }}" method="GET">
+             <input hidden="hidden" name="id" value="{{book.id}}">
+            <input class="form-control" name="rating" id="exampleFormControlInput1" placeholder="">
+            <button type="submit" class="btn btn-light  submit-button">Change Rating</button>
+</form>
+</body>
+</html>
